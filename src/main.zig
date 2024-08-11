@@ -1,6 +1,7 @@
 const std = @import("std");
 const windows = std.os.windows;
 const HANDLE = windows.HANDLE;
+const ULONG = windows.ULONG;
 
 const message = "Hello World!";
 
@@ -8,12 +9,12 @@ extern "ntdll" fn NtWriteFile(
     in_hFile: HANDLE,
     in_hEvent: ?HANDLE,
     in_ApcRoutine: ?*windows.IO_APC_ROUTINE,
-    in_ApcContext: ?[*]const u8,
+    in_ApcContext: ?windows.PVOID,
     out_IoStatusBlock: *windows.IO_STATUS_BLOCK,
     in_Buffer: [*]const u8,
-    in_Length: usize,
+    in_Length: ULONG,
     in_ByteOffset: ?*windows.LARGE_INTEGER,
-    in_Key: ?*usize,
+    in_Key: ?*ULONG,
 ) void;
 
 pub fn main() void {
