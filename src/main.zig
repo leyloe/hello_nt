@@ -1,6 +1,5 @@
 const std = @import("std");
 const windows = std.os.windows;
-
 const HANDLE = windows.HANDLE;
 
 const message = "Hello World!";
