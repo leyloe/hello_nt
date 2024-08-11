@@ -1,4 +1,4 @@
- hyper (maybe not hyper) minimal hello world in zig, windows nt:
+ hyper (maybe not hyper) minimal hello world program in zig, windows nt:
  
  only 2 imports ever made - NtWriteFile, RtlExitUserProcess.\
  dlls - ntdll.dll\
