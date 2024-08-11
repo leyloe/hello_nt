@@ -1,9 +1,7 @@
 const std = @import("std");
 const windows = std.os.windows;
 
-const DWORD = windows.DWORD;
 const HANDLE = windows.HANDLE;
-const PVOID = windows.PVOID;
 
 const message = "Hello World!";
 
